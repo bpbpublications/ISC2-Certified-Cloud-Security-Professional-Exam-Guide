@@ -1,0 +1,37 @@
+var transaction = new object();
+
+customers.forEach(
+    (customer) => {
+        transaction.amount = 500;
+        transaction.bankaccount = 'MYACCOUNTNR'; // test value
+
+        if (!isAllDataThere(customer)) {
+            next;
+        }
+
+        console.log('provide some logging about what is going on');
+
+        if (isUKAddress(customer)) {
+            transaction.bankaccount = 'prefix' + transaction.bankaccount;
+            sendTranasctionUK(transaction);
+        } else {
+            sendTranasctionOther(transaction);
+        }
+    }
+);
+
+function isAllDataThere(customer) {
+    var outcome = true;
+    if (customer.phone_number === null) return false;
+    if (customer.address === null) return false;
+    if (customer.address.street === null) return false;
+    if (customer.address.city === null) return false;
+    if (customer.address.zipcode === null) return false;
+    if (customer.bankaccount === null) return false;
+    return outcome;
+}
+
+function isUKAddress(customer) {
+    if (customer.address.country === 'UK') return true;
+    return false;
+}

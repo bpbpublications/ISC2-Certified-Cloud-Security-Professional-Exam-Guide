@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Julia",
+        "data_of_birth": "1992-03-05",
+        "place_of_birth": "Brussels, Belgium",
+        "hometown": "Antwerp"
+    },
+    {
+        "name": "Eliot",
+        "data_of_birth": "1991-12-12",
+        "place_of_birth": "Berlin, Germany",
+        "hometown": "Antwerp",
+        "eye_color": "brown"
+    },
+    {
+        "list_name": "shopping list",
+        "items": [
+            "rhubarb",
+            "yoghurt"
+        ]
+    }
+]
